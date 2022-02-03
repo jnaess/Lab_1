@@ -1,0 +1,9 @@
+cd .\Winter2022\ENGO-551\Lab1  
+
+set FLASK_ENV=development
+
+flask run
+
+set FLASK_DEBUG=1
+
+Flask run

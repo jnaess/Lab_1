@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block head %}
+    {% block title %}Index{% endblock %}
+{% endblock %}
+
+{% block content %}
+    {% if session["name"] %}
+        You are logged in as {{ session["name"] }}. <a href="/logout">Log out</a>
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
+
+    <form action='/register' method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <input autocomplete="off" autofocus name="email" placeholder="Email" type="text">
+        <select name="sport">
+            <option disable selected>Sport</option>
+            <option>Basketball</option>
+            <option>Soccer</option>
+            <option>Ultimate Frisbee</option>
+        </select>
+        <input type="submit" value="Click me!">
+    </form>
+<a href='/search'>Search</a>
+           
+{% endblock %}
+           
